@@ -14,4 +14,25 @@ import java.util.List;
 public class Carrito {
     private int id;
     private List<DetalleCarrito> listdetallecarrito;
+
+    public Carrito(List<DetalleCarrito> listdetallecarrito) {
+        this.listdetallecarrito = listdetallecarrito;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<DetalleCarrito> getListdetallecarrito() {
+        return listdetallecarrito;
+    }
+
+    public void setListdetallecarrito(List<DetalleCarrito> listdetallecarrito) {
+        this.listdetallecarrito = listdetallecarrito;
+    }
+    
 }
