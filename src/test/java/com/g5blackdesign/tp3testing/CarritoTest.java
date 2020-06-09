@@ -7,6 +7,7 @@ package com.g5blackdesign.tp3testing;
 
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -14,4 +15,7 @@ import org.junit.jupiter.api.DisplayNameGenerator;
  */
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class CarritoTest {
+    @Test
+    void Testalgo(){
+    }
 }
