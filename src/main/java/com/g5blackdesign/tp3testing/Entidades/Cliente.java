@@ -9,7 +9,7 @@ package com.g5blackdesign.tp3testing.Entidades;
  *
  * @author federico
  */
-public class Usuario {
+public class Cliente {
     private Carrito carrito;
     private int idusuario;
     private String nombre;
@@ -65,7 +65,7 @@ public class Usuario {
         this.email = email;
     }   
     
-    public Usuario(Carrito carrito, String nombre, String apellido, String dni, String email) {
+    public Cliente(Carrito carrito, String nombre, String apellido, String dni, String email) {
         this.carrito = carrito;
         this.nombre = nombre;
         this.apellido = apellido;

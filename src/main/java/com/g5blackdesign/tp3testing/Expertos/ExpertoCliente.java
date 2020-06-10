@@ -5,21 +5,21 @@
  */
 package com.g5blackdesign.tp3testing.Expertos;
 
-import com.g5blackdesign.tp3testing.Entidades.Usuario;
+import com.g5blackdesign.tp3testing.Entidades.Cliente;
 import com.g5blackdesign.tp3testing.Entidades.Carrito;
 
 /**
  *
  * @author ignacio
  */
-public class ExpertoUsuario {
-    private Usuario usuario;
+public class ExpertoCliente {
+    private Cliente usuario;
     public Carrito carrito;
     
     
-    public boolean CrearUsuario(Carrito carrito, String nombre, String apellido, String dni, String email){
+    public boolean CrearCliente(Carrito carrito, String nombre, String apellido, String dni, String email){
         if (!carrito.getListdetallecarrito().isEmpty()) {
-            usuario = new Usuario(carrito,nombre,apellido,dni,email);
+            usuario = new Cliente(carrito,nombre,apellido,dni,email);
             return true;
         }
         return false;

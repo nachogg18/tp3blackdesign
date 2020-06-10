@@ -5,9 +5,9 @@
  */
 package com.g5blackdesign.tp3testing;
 import com.g5blackdesign.tp3testing.Entidades.Carrito;
-import com.g5blackdesign.tp3testing.Entidades.Usuario;
+import com.g5blackdesign.tp3testing.Entidades.Cliente;
 import com.g5blackdesign.tp3testing.Entidades.DetalleCarrito;
-import com.g5blackdesign.tp3testing.Controladores.ControladorUsuario;
+import com.g5blackdesign.tp3testing.Controladores.ControladorCliente;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayNameGeneration;
@@ -21,28 +21,34 @@ import java.util.List;
  *
  * @author ignacio
  */
-public class UsuarioTest {
+public class ClienteTest {
     
         static Carrito carrito ;
-        static Usuario usuario;
+        static Cliente usuario;
         static List<DetalleCarrito> listaDetalleCarrito;
-        static ControladorUsuario controladorUsuario; 
+        static ControladorCliente controladorCliente; 
         
         
         @BeforeAll
         public static void CrearObjetosNecesarios() {
-            listaDetalleCarrito = new ArrayList();
+            listaDetalleCarrito = new ArrayList();  //ESTÁ VACÍO
             carrito = new Carrito(listaDetalleCarrito);
-            controladorUsuario = new ControladorUsuario();
+            controladorCliente = new ControladorCliente();
         }
         
    
-    
+        /*** Como el carrito 
+         * está vacío 
+         * no se crea el cliente
+         * y el método Crear cliente debe devolver false 
+        ***/
         @ParameterizedTest
-        @CsvSource({"Ignacio,Galvez,35678392,lafg@mail.com"})
-            void CrearUsuarioConCarroVacío(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
-                assertEquals(false,controladorUsuario.getExpertoUsuario().CrearUsuario(carrito, nombreCliente, apellidoCliente, dniCliente, mailCliente));
+        @CsvSource({"luis,Alvarado,35678392,lafg@mail.com"})
+            void CrearClienteConCarroVacío(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
+                assertEquals(false,controladorCliente.getExpertoCliente().CrearCliente(carrito, nombreCliente, apellidoCliente, dniCliente, mailCliente));
         }
+            
+        
             
             
     
