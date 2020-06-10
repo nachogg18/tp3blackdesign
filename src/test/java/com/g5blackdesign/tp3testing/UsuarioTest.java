@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.g5blackdesign.tp3testing;
-//import com.g5blackdesign.tp3testing.Controladores.ControladorCarrito;
 import com.g5blackdesign.tp3testing.Entidades.Carrito;
 import com.g5blackdesign.tp3testing.Entidades.Usuario;
 import com.g5blackdesign.tp3testing.Entidades.DetalleCarrito;
