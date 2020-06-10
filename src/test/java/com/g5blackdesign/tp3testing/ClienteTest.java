@@ -9,7 +9,7 @@ import com.g5blackdesign.tp3testing.Entidades.Cliente;
 import com.g5blackdesign.tp3testing.Entidades.DetalleCarrito;
 import com.g5blackdesign.tp3testing.Controladores.ControladorCliente;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.BeforeAll;
+// import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,13 +28,7 @@ public class ClienteTest {
         static List<DetalleCarrito> listaDetalleCarrito;
         static ControladorCliente controladorCliente; 
         
-        
-        @BeforeAll
-        public static void CrearObjetosNecesarios() {
-            listaDetalleCarrito = new ArrayList();  //ESTÁ VACÍO
-            carrito = new Carrito(listaDetalleCarrito);
-            controladorCliente = new ControladorCliente();
-        }
+  
         
    
         /*** Como el carrito 
@@ -45,12 +39,10 @@ public class ClienteTest {
         @ParameterizedTest
         @CsvSource({"luis,Alvarado,35678392,lafg@mail.com"})
             void CrearClienteConCarroVacío(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
+                listaDetalleCarrito = new ArrayList();  //ESTÁ VACÍO
+                carrito = new Carrito(listaDetalleCarrito);
+                controladorCliente = new ControladorCliente();
                 assertEquals(false,controladorCliente.getExpertoCliente().CrearCliente(carrito, nombreCliente, apellidoCliente, dniCliente, mailCliente));
         }
-            
-        
-            
-            
-    
-    
+       
 }
