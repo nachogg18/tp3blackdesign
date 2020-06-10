@@ -11,7 +11,7 @@ package com.g5blackdesign.tp3testing.Entidades;
  */
 public class Cliente {
     private Carrito carrito;
-    private int idusuario;
+    private int idCliente;
     private String nombre;
     private String apellido;
     private String dni;
@@ -25,12 +25,12 @@ public class Cliente {
         this.carrito = carrito;
     }
 
-    public int getIdusuario() {
-        return idusuario;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setIdusuario(int idusuario) {
-        this.idusuario = idusuario;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNombre() {
