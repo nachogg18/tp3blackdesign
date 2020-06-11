@@ -57,7 +57,7 @@ public class ClienteTest {
         
         @ParameterizedTest
         @CsvSource({"luis,Alvarado,35678392,lafg@mail.com"})
-            void CrearClienteConCarroVacío(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
+            void crearClienteConCarroVacío(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
                 carrito = new Carrito(listaDetalleCarrito);
                 carrito.setId(1);
                 controladorCliente = new ControladorCliente();
@@ -66,7 +66,7 @@ public class ClienteTest {
             
         @ParameterizedTest
         @CsvSource({"S3RG10,Alvarado,35678392,lafg@mail.com"})
-            void CrearClienteConNombreconNumeros(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
+            void crearClienteConNombreconNumeros(final String nombreCliente, final String apellidoCliente, final String dniCliente,final String mailCliente) {
                 carrito = new Carrito(listaDetalleCarrito);
                 carrito.setId(1);
                 DetalleCarrito detalleCarrito = new DetalleCarrito(1,1,3);
